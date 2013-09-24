@@ -9,7 +9,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- General strings -->
-    <string name="app_name">CM Updater</string>
+    <string name="app_name">CK Updater</string>
     <string name="display_name">Обновления</string>
     <string name="unknown">Неизвестный</string>
 
@@ -110,7 +110,7 @@
     <string name="loading_changelog">Загрузка\u2026</string>
 
     <!-- DashClock extension strings -->
-    <string name="extension_label">Обновления CyanogenMod</string>
+    <string name="extension_label">Обновления CyanKang</string>
     <string name="extension_description">Показывает количество доступных обновлений</string>
     <plurals name="extension_status">
         <item quantity="one">Доступно <xliff:g id="count">%d</xliff:g> обновление системы</item>
@@ -118,8 +118,8 @@
         <item quantity="other">Доступно <xliff:g id="count">%d</xliff:g> обновлений системы</item>
     </plurals>
     <plurals name="extension_expandedTitle">
-        <item quantity="one">Доступно <xliff:g id="count">%d</xliff:g> обновление CyanogenMod</item>
-        <item quantity="few">Доступно <xliff:g id="count">%d</xliff:g> обновления CyanogenMod</item>
-        <item quantity="other">Доступно <xliff:g id="count">%d</xliff:g> обновлений CyanogenMod</item>
+        <item quantity="one">Доступно <xliff:g id="count">%d</xliff:g> обновление CyanKang</item>
+        <item quantity="few">Доступно <xliff:g id="count">%d</xliff:g> обновления CyanKang</item>
+        <item quantity="other">Доступно <xliff:g id="count">%d</xliff:g> обновлений CyanKang</item>
     </plurals>
 </resources>

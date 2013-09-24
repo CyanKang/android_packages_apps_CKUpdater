@@ -280,7 +280,6 @@ public class UpdateCheckService extends IntentService {
     private JSONObject buildUpdateRequest(int updateType) throws JSONException {
         JSONArray channels = new JSONArray();
         channels.put("stable");
-        channels.put("snapshot");
         channels.put("RC");
         if (updateType == Constants.UPDATE_TYPE_NEW_NIGHTLY
                 || updateType == Constants.UPDATE_TYPE_ALL_NIGHTLY) {
@@ -339,8 +338,6 @@ public class UpdateCheckService extends IntentService {
             type = UpdateInfo.Type.STABLE;
         } else if (TextUtils.equals(typeString, "RC")) {
             type = UpdateInfo.Type.RC;
-        } else if (TextUtils.equals(typeString, "snapshot")) {
-            type = UpdateInfo.Type.SNAPSHOT;
         } else if (TextUtils.equals(typeString, "nightly")) {
             type = UpdateInfo.Type.NIGHTLY;
         } else {

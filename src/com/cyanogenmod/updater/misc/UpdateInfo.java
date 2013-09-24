@@ -26,7 +26,6 @@ public class UpdateInfo implements Parcelable, Serializable {
         UNKNOWN,
         STABLE,
         RC,
-        SNAPSHOT,
         NIGHTLY
     };
 

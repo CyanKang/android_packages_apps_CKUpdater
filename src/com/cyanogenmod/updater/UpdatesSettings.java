@@ -562,7 +562,7 @@ public class UpdatesSettings extends PreferenceActivity implements
         mUpdatesList.removeAll();
 
         // Convert the installed version name to the associated filename
-        String installedZip = "cm-" + Utils.getInstalledVersion() + ".zip";
+        String installedZip = "CyanKang-" + Utils.getInstalledVersion() + ".zip";
 
         // Add the updates
         for (UpdateInfo ui : updates) {
