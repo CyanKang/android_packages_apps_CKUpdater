@@ -7,14 +7,14 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.cyanogenmod.updater.misc;
+package com.cyankang.updater.misc;
 
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.TextUtils;
 
-import com.cyanogenmod.updater.utils.Utils;
+import com.cyankang.updater.utils.Utils;
 
 import java.io.File;
 import java.io.Serializable;
@@ -32,18 +32,16 @@ public class UpdateInfo implements Parcelable, Serializable {
     private String mUiName;
     private String mFileName;
     private Type mType;
-    private int mApiLevel;
     private long mBuildDate;
     private String mDownloadUrl;
     private String mMd5Sum;
 
     private Boolean mIsNewerThanInstalled;
 
-    public UpdateInfo(String fileName, long date, int apiLevel, String url,
+    public UpdateInfo(String fileName, long date, String url,
             String md5, Type type) {
         initializeName(fileName);
         mBuildDate = date;
-        mApiLevel = apiLevel;
         mDownloadUrl = url;
         mMd5Sum = md5;
         mType = type;
@@ -108,13 +106,8 @@ public class UpdateInfo implements Parcelable, Serializable {
             return mIsNewerThanInstalled;
         }
 
-        int installedApiLevel = Utils.getInstalledApiLevel();
-        if (installedApiLevel != mApiLevel && mApiLevel > 0) {
-            mIsNewerThanInstalled = mApiLevel > installedApiLevel;
-        } else {
-            // API levels match, so compare build dates.
-            mIsNewerThanInstalled = mBuildDate > Utils.getInstalledBuildDate();
-        }
+        // Compare build dates.
+        mIsNewerThanInstalled = mBuildDate > Utils.getInstalledBuildDate();
 
         return mIsNewerThanInstalled;
     }
@@ -177,7 +170,6 @@ public class UpdateInfo implements Parcelable, Serializable {
         out.writeString(mUiName);
         out.writeString(mFileName);
         out.writeString(mType.toString());
-        out.writeInt(mApiLevel);
         out.writeLong(mBuildDate);
         out.writeString(mDownloadUrl);
         out.writeString(mMd5Sum);
@@ -187,7 +179,6 @@ public class UpdateInfo implements Parcelable, Serializable {
         mUiName = in.readString();
         mFileName = in.readString();
         mType = Enum.valueOf(Type.class, in.readString());
-        mApiLevel = in.readInt();
         mBuildDate = in.readLong();
         mDownloadUrl = in.readString();
         mMd5Sum = in.readString();

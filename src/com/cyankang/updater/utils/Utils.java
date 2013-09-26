@@ -7,7 +7,7 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.cyanogenmod.updater.utils;
+package com.cyankang.updater.utils;
 
 import android.app.AlarmManager;
 import android.app.NotificationManager;
@@ -28,9 +28,9 @@ import android.os.storage.StorageVolume;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.cyanogenmod.updater.R;
-import com.cyanogenmod.updater.misc.Constants;
-import com.cyanogenmod.updater.service.UpdateCheckService;
+import com.cyankang.updater.R;
+import com.cyankang.updater.misc.Constants;
+import com.cyankang.updater.service.UpdateCheckService;
 
 import java.io.File;
 import java.io.IOException;
@@ -59,10 +59,6 @@ public class Utils {
 
     public static String getInstalledVersion() {
         return SystemProperties.get("ro.cm.version");
-    }
-
-    public static int getInstalledApiLevel() {
-        return SystemProperties.getInt("ro.build.version.sdk", 0);
     }
 
     public static long getInstalledBuildDate() {

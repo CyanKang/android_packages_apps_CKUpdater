@@ -7,7 +7,7 @@
  * or at https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-package com.cyanogenmod.updater.receiver;
+package com.cyankang.updater.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -17,9 +17,9 @@ import android.net.ConnectivityManager;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.cyanogenmod.updater.misc.Constants;
-import com.cyanogenmod.updater.service.UpdateCheckService;
-import com.cyanogenmod.updater.utils.Utils;
+import com.cyankang.updater.misc.Constants;
+import com.cyankang.updater.service.UpdateCheckService;
+import com.cyankang.updater.utils.Utils;
 
 public class UpdateCheckReceiver extends BroadcastReceiver {
     private static final String TAG = "UpdateCheckReceiver";
