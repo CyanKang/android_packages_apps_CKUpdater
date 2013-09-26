@@ -48,7 +48,7 @@ public class UpdateInfo implements Parcelable, Serializable {
     }
 
     public UpdateInfo(String fileName) {
-        this(fileName, 0, 0, null, null, Type.UNKNOWN);
+        this(fileName, 0, null, null, Type.UNKNOWN);
     }
 
     private UpdateInfo(Parcel in) {
