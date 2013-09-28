@@ -64,6 +64,15 @@ public class Utils {
     public static long getInstalledBuildDate() {
         return SystemProperties.getLong("ro.build.date.utc", 0);
     }
+    
+    public static boolean hasPDroid() {
+    	String version = SystemProperties.get("ro.cm.version");
+    	if (version.contains("PDroid")) {
+    		return true;
+    	} else {
+    		return false;
+    	}
+    }
 
     public static String getUserAgentString(Context context) {
         try {

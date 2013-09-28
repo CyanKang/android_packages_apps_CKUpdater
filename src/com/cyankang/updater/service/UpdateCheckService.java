@@ -287,7 +287,8 @@ public class UpdateCheckService extends IntentService {
         }
 
         JSONObject params = new JSONObject();
-        params.put("device", TESTING_DOWNLOAD ? "cmtestdevice" : Utils.getDeviceType());
+        params.put("device", TESTING_DOWNLOAD ? "cktestdevice" : Utils.getDeviceType());
+        params.put("pdroid", Utils.hasPDroid());
         params.put("channels", channels);
 
         JSONObject request = new JSONObject();
